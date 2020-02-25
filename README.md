@@ -12,3 +12,6 @@ https://asciinema.org/a/sVOwfj98qlah59LJbPEYtLE7F
 
 ## Play GCD Game
 https://asciinema.org/a/rH21PFu8Q2QlAN5Vh4OyLzTQv
+
+## Play Progression Game
+https://asciinema.org/a/B6aeaSaSFB2p9EFVjd34QZp55
