@@ -5,16 +5,16 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage)](https://codeclimate.com/github/codeclimate/codeclimate/test_coverage)
 
 ## Play Even Game
-https://asciinema.org/a/rHSRiEkJjSxlr35d1kiKxQZSJ
+https://asciinema.org/a/Dy5pEAUmdYCxtbdiJbuPVisRU
 
 ## Play Calc Game
-https://asciinema.org/a/sVOwfj98qlah59LJbPEYtLE7F
+https://asciinema.org/a/hf9P3tCLkzRGAzyl4LT4eB3vQ
 
 ## Play GCD Game
-https://asciinema.org/a/rH21PFu8Q2QlAN5Vh4OyLzTQv
+https://asciinema.org/a/AtWoyE3JYohiODNVmL1AZKMac
 
 ## Play Progression Game
-https://asciinema.org/a/B6aeaSaSFB2p9EFVjd34QZp55
+https://asciinema.org/a/X8YeRUymqpbDFXjPHTacx3dx4
 
 ## Play Prime Game
-https://asciinema.org/a/CPl9M00eyEhfoXivPEY7udIGe
+https://asciinema.org/a/3Z28Z8o53vlvWPge0NlTf2eNQ
