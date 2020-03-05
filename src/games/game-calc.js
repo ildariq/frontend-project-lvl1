@@ -1,4 +1,7 @@
-import { generateRandomNum, generateQuestion, checkAnswer } from '../index.js';
+import generateGame from '../index.js';
+import generateRandomNum from '../utils.js';
+
+const instruction = 'What is the result of the expression?';
 
 const generateRandomOperator = () => {
   const operators = ['+', '-', '*'];
@@ -24,10 +27,9 @@ const calcNumsGame = () => {
   };
   const correctAnswerToString = String(correctAnswer(randomNum1, randomNum2, operator));
   const question = `${randomNum1} ${operator} ${randomNum2}`;
-  return checkAnswer(question, correctAnswerToString);
+  return [question, correctAnswerToString];
 };
 
 export default () => {
-  console.log('What is the result of the expression?');
-  generateQuestion(calcNumsGame);
+  generateGame(instruction, calcNumsGame);
 };

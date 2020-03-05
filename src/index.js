@@ -5,24 +5,6 @@ const userName = readlineSync.question('May I have your name? ');
 console.log(`Hello, ${userName}!`);
 const answerCount = 3;
 
-const generateRandomNum = (min = 1, max = 100) => {
-  const minNum = Math.ceil(min);
-  const maxNum = Math.floor(max);
-  return Math.floor(Math.random() * (maxNum - minNum)) + minNum;
-};
-
-const generateQuestion = (game) => {
-  for (let i = 0; i < answerCount; i += 1) {
-    const answerResult = game();
-    if (answerResult !== true) {
-      break;
-    }
-    if (i === answerCount - 1) {
-      console.log(`Correct!\nCongratulations, ${userName}!`);
-    }
-  }
-};
-
 const checkAnswer = (question, correctAnswer) => {
   console.log(`Question: ${question}`);
   const userAnswer = readlineSync.question('Your answer: ');
@@ -34,4 +16,22 @@ const checkAnswer = (question, correctAnswer) => {
   return true;
 };
 
-export { generateRandomNum, generateQuestion, checkAnswer };
+const generateQuestion = (game) => {
+  for (let i = 0; i < answerCount; i += 1) {
+    const questionAndCorrectAnswer = game();
+    const question = questionAndCorrectAnswer[0];
+    const correctAnswer = questionAndCorrectAnswer[1];
+    const userAnswer = checkAnswer(question, correctAnswer);
+    if (userAnswer !== true) {
+      break;
+    }
+    if (i === answerCount - 1) {
+      console.log(`Correct!\nCongratulations, ${userName}!`);
+    }
+  }
+};
+
+export default (instruction, game) => {
+  console.log(instruction);
+  generateQuestion(game);
+};

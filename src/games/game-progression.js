@@ -1,9 +1,12 @@
-import { generateRandomNum, generateQuestion, checkAnswer } from '../index.js';
+import generateGame from '../index.js';
+import generateRandomNum from '../utils.js';
+
+const instruction = 'What number is missing in the progression?';
+const progressionLength = 10;
 
 const progressionGame = () => {
   const progressionStep = generateRandomNum(1, 11);
   const hiddenElemPosition = generateRandomNum(1, 9);
-  const progressionLength = 10;
   const progression = [];
   const startNum = generateRandomNum();
   progression.push(startNum);
@@ -15,10 +18,10 @@ const progressionGame = () => {
   const correctAnswer = String(progression[hiddenElemPosition]);
   progression[hiddenElemPosition] = '..';
   const question = progression.join(' ');
-  return checkAnswer(question, correctAnswer);
+
+  return [question, correctAnswer];
 };
 
 export default () => {
-  console.log('What number is missing in the progression?');
-  generateQuestion(progressionGame);
+  generateGame(instruction, progressionGame);
 };
